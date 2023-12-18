@@ -1,5 +1,8 @@
 # Construction of Semantic Topological Map for Domestic Environment
 ---
+#### Abstract:
+We propose a new method for constructing semantic topological maps. The semantic topological map is represented by a directed graph. The nodes of the graph indicate the type of objects, and the edge between the two nodes shows their relative relations. We performed instance segmentation with the Mask-RCNN network, used a mapping algorithm to estimate the relative positions, and update the map through each observation in a probabilistic model. We tested our method in an indoor environment. The results showed that our map could effectively reflect the relative positions of various objects in the domain.
+
 #### Environment configuration:
 - Anaconda3
 
