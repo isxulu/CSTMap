@@ -1,8 +1,6 @@
 # Construction of Semantic Topological Map for Domestic Environment
-#### 成员：张嘉浩，叶蔚林，徐璐
-#### 内容：面向家具环境的语义拓扑地图的构建
 ---
-#### 环境配置：
+#### Environment configuration:
 - Anaconda3
 
 - python3.6 / 3.7
@@ -17,20 +15,17 @@
 
   
 
-#### 面向家居环境：
-
-1. 建立主体
-   1. 遍历`[class_ids]`，检测桌子，椅子等物品
-   2. 检测到桌子->将桌子设置为主体，等
-      1. 如果有两张及以上桌子，选取`[roi]`最大的为主体
-2. 遍历`[rois]`，与主体`[roi]`进行比较
-   1. `[rois]`与主体`[roi]`无重合：通过`[rois]`的相对位置（左/右）将物体归为主体左/右
-   2. `[rois]`与主体`[roi]`有重合：
-      1. 完全重叠，即`[rois]`在桌子`[roi]`内部：前/上
-      2. 部分重叠，通过`[mask]`与`[rois]`判断遮挡关系：被遮挡的在后/下
-3. 将关系设置为`.svg`文件
-4. 画出拓扑地图
-
-
-
-注：遮挡关系的判断，通过检测框与Mask的最边缘像素差值进行比较，差值大于某一个值，则说明该物体被遮挡
+#### Environment Configuration:
+1. Establishing the Subject:
+  1. Iterate through [class_ids] to detect objects such as tables, chairs, etc.
+  2. If a table is detected, set it as the subject, and so on.
+2. If there are multiple tables, select the one with the largest [roi] as the subject.
+   1. Iterate through [rois] and compare them with the subject's [roi]:
+     1. If there is no overlap between [rois] and the subject's [roi]: Determine the relative position (left/right) of the object based on [rois].
+   2. If there is an overlap between [rois] and the subject's [roi]:
+      1. Complete overlap, meaning [rois] is inside the table's [roi]: Front/above.
+      2. Partial overlap: Determine the occlusion relationship using [mask] and [rois]. Objects that are occluded are behind/below.
+3. Save the relationships as an .svg file.
+4. Generate a topology map.
+   
+Note: The occlusion relationship is determined by comparing the difference in the edge pixels between the bounding box and the mask. If the difference exceeds a certain threshold, it indicates that the object is occluded.
