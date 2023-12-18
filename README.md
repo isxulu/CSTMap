@@ -25,7 +25,7 @@
       1. Determine the relative position (left/right) of the object based on [rois].
    2. If there is an overlap between [rois] and the subject's [roi]:
       1. Complete overlap, meaning [rois] is inside the table's [roi]: Front/above.
-      2. Partial overlap: Determine the occlusion relationship using [mask] and [rois]. Objects that are occluded are behind/below.
+      2. Partial overlap, Determine the occlusion relationship using [mask] and [rois]: Objects that are occluded are behind/below.
 3. Save the relationships as an .svg file.
 4. Generate a topology map.
    
