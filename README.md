@@ -15,10 +15,10 @@
 
   
 
-#### Environment Configuration:
+#### Object Localization Algorithm:
 1. Establishing the Subject:
-  1. Iterate through [class_ids] to detect objects such as tables, chairs, etc.
-  2. If a table is detected, set it as the subject, and so on.
+   1. Iterate through [class_ids] to detect objects such as tables, chairs, etc.
+   2. If a table is detected, set it as the subject, and so on.
 2. If there are multiple tables, select the one with the largest [roi] as the subject.
    1. Iterate through [rois] and compare them with the subject's [roi]:
      1. If there is no overlap between [rois] and the subject's [roi]: Determine the relative position (left/right) of the object based on [rois].
