@@ -24,7 +24,7 @@ We propose a new method for constructing semantic topological maps. The semantic
 
 #### Main steps of map building
 
-<img src=".\imgs\steps.jpg">
+<img src=".\imgs\Steps.jpg">
 
 1. Use Mask-RCNN network for instance segmentation 
 2. Distinguish the relationship of objects by the difference of outputs from two networks 
