@@ -57,7 +57,7 @@ Note: The occlusion relationship is determined by comparing the difference in th
 
 #### Building a Gazebo Simulation Test Environment
 
-<img src=".\imgs\gazebo.png">
+<img src=".\imgs\Gazebo.png">
 
 #### Real Laboratory Test Environment
 
